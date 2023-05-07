@@ -6,7 +6,7 @@ QUESTIONS:
 --1)Select all columns from the contact table where the active flag is 1
 select * from Contacttable where Active_flag=1;
 --2)Deactivate contacts who are opted out 
-delete  from Contacttable where opt_out=0;
+update Contacttable set Active_flag=0 where Active_flag=1;
 --3)Delete all the contacts who have the company name as ‘ABC’
 delete from Contacttable where company="ABC";
 --4)Insert a new row with id as 658, name as ‘mili’, email as ‘mili@gmail.com’, the company as ‘DGH’, active flag as 1, opt-out flag as 1
